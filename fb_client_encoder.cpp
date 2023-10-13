@@ -12,6 +12,18 @@ using namespace ClientEncoder;
 
 int main(int argc, char *argv[])
 {
+
+    if (argc != 2)
+    {
+        std::cerr << "Usage: " << argv[0] << " <file_path>" << std::endl;
+        return 1; // Return an error code
+    }
+
+    std::string filePath = argv[1];
+
+    // Open the file
+    std::ifstream file(filePath);
+
     flatbuffers::FlatBufferBuilder builder;
 
     auto personYoga = ClientEncoder::CreatePerson(builder, builder.CreateString("Yoganand"), 21, 76.5, builder.CreateString("Male"));
@@ -77,13 +89,13 @@ int main(int argc, char *argv[])
 
     if (buffer && size > 0)
     {
-        std::ofstream outfile("fb_clients.bin", std::ios::out | std::ios::binary);
+        std::ofstream outfile(filePath, std::ios::out | std::ios::binary);
 
         if (outfile.is_open())
         {
             outfile.write(reinterpret_cast<const char *>(buffer), size);
             outfile.close();
-            std::cout << "Data has been written to output.bin." << std::endl;
+            std::cout << "Data has been written to " << filePath << std::endl;
         }
         else
         {

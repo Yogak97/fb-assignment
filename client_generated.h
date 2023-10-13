@@ -28,15 +28,15 @@ namespace ClientEncoder
   struct ClientContainerBuilder;
 
   //***************** User defined functions****************************************************************************************
-  const ClientEncoder::Person *GetPerson(flatbuffers::FlatBufferBuilder &fbb, flatbuffers::Offset<ClientEncoder::Person> offset)
-  {
-    return flatbuffers::GetTemporaryPointer<ClientEncoder::Person>(fbb, offset);
-  }
+  // const ClientEncoder::Person *GetPerson(flatbuffers::FlatBufferBuilder &fbb, flatbuffers::Offset<ClientEncoder::Person> offset)
+  // {
+  //   return flatbuffers::GetTemporaryPointer<ClientEncoder::Person>(fbb, offset);
+  // }
 
-  const ClientEncoder::Group *GetGroup(flatbuffers::FlatBufferBuilder &fbb, flatbuffers::Offset<ClientEncoder::Group> offset)
-  {
-    return flatbuffers::GetTemporaryPointer<ClientEncoder::Group>(fbb, offset);
-  }
+  // const ClientEncoder::Group *GetGroup(flatbuffers::FlatBufferBuilder &fbb, flatbuffers::Offset<ClientEncoder::Group> offset)
+  // {
+  //   return flatbuffers::GetTemporaryPointer<ClientEncoder::Group>(fbb, offset);
+  // }
   //***********************************************************************************************************************************
 
   enum ClientUnion : uint8_t

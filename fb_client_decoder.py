@@ -56,5 +56,8 @@ def deserialize_binary_file(file_path):
 
 # Usage example
 if __name__ == "__main__":
-    binary_file_path = "fb_clients.bin"
-    deserialize_binary_file(binary_file_path)
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <file_path>")
+    else:
+        binary_file_path = sys.argv[1]  # Get the file path from the command-line argument
+        deserialize_binary_file(binary_file_path)
