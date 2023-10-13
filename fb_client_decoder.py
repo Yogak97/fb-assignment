@@ -2,7 +2,7 @@
 #Author : Yoganand Kanhed
 
 import os, sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '../flatbuffers/python'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'flatbuffers/python'))
 import ClientEncoder.ClientContainer
 import ClientEncoder.Group 
 import ClientEncoder.Client
