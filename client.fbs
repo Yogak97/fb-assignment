@@ -1,0 +1,34 @@
+namespace ClientEncoder;
+
+table Person 
+{
+    name: string;
+    age: float;
+    weight: float;
+    gender: string;
+}
+
+table Group 
+{
+    groupName: string;
+    averageAge: float;
+    averageWeight: float;
+    members: [Person];
+}
+
+union ClientUnion 
+{ 
+    Person, Group 
+}
+
+table Client 
+{
+   client : ClientUnion;
+}
+
+table ClientContainer 
+{
+    clients : [Client];
+}
+
+root_type ClientContainer;

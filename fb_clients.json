@@ -1,0 +1,78 @@
+{
+  clients: [
+    {
+      client_type: "Person",
+      client: {
+        name: "Yoganand",
+        age: 21.0,
+        weight: 76.5,
+        gender: "Male"
+      }
+    },
+    {
+      client_type: "Group",
+      client: {
+        groupName: "COEP",
+        averageAge: 22.0,
+        averageWeight: 77.5,
+        members: [
+          {
+            name: "Yoganand",
+            age: 21.0,
+            weight: 76.5,
+            gender: "Male"
+          },
+          {
+            name: "Bhargav",
+            age: 24.0,
+            weight: 80.0,
+            gender: "Male"
+          },
+          {
+            name: "Chinmay",
+            age: 23.0,
+            weight: 75.0,
+            gender: "Male"
+          }
+        ]
+      }
+    },
+    {
+      client_type: "Group",
+      client: {
+        groupName: "MIT",
+        averageAge: 25.0,
+        averageWeight: 87.5,
+        members: [
+          {
+            name: "Mayur",
+            age: 27.0,
+            weight: 77.5,
+            gender: "Male"
+          },
+          {
+            name: "Akshay",
+            age: 24.0,
+            weight: 90.0,
+            gender: "Male"
+          },
+          {
+            name: "Ananya",
+            age: 26.0,
+            weight: 55.0,
+            gender: "Female"
+          }
+        ]
+      }
+    },
+    {
+      client_type: "Person",
+      client: {
+        name: "Bhargav",
+        age: 24.0,
+        weight: 80.0,
+        gender: "Male"
+      }
+    }
+  ]
+}
